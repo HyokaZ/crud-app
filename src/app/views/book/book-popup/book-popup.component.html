@@ -1,0 +1,23 @@
+<form [formGroup]="form" (ngSubmit)="save()">
+    <div fxLayout="row warp">
+        <div fxFlex="100" fxFlex.gt-xs="100" fxFlex.gt-sm="100" fxFlex.gt-md="100" fxFlex.gt-lg="100">
+            <mat-toolbar color="primary">
+                <mat-toolbar-row>
+                    <span>add book</span>
+                    <span style=" flex: 1 1 auto;"></span>
+                    <button mat-raised-button color="accent" type="submit"><mat-icon
+                            style="margin: 0;">add</mat-icon> Save</button>
+                    <button mat-raised-button color="warn" (click)="this.dialogRef.close(null)"><mat-icon
+                            style="margin: 0;">cancel</mat-icon> Cancel</button>
+                </mat-toolbar-row>
+            </mat-toolbar>
+        </div>
+        <div fxFlex="100" fxFlex.gt-xs="100" fxFlex.gt-sm="100" fxFlex.gt-md="100" fxFlex.gt-lg="100">
+            <mat-form-field style="width: 100%;">
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="name">
+            </mat-form-field>
+        </div>
+        
+    </div>
+</form>
